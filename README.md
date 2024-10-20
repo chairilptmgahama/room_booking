@@ -1,17 +1,22 @@
+## How To Install
+
 Clone
-    - clone https://github.com/chairilptmgahama/room_booking
+    ```bash
+    clone https://github.com/chairilptmgahama/room_booking
+    ```
 
 Install
-    - path to folder
-    - php composer install
+    ```bash
+    php composer install
+    ```
     - copy .env.example to .env
     - change 
-        DB_CONNECTION=mysql
-        DB_HOST=127.0.0.1
-        DB_PORT=3306
-        DB_DATABASE=your_DB_Name
-        DB_USERNAME=your_db_username
-        DB_PASSWORD=your_DB_password
+        //DB_CONNECTION=mysql
+        //DB_HOST=127.0.0.1
+        //DB_PORT=3306
+        /DB_DATABASE=your_DB_Name
+        //DB_USERNAME=your_db_username
+        //DB_PASSWORD=your_DB_password
 
 Run
     - php artisan serv
