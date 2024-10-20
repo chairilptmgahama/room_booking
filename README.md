@@ -1,6 +1,7 @@
 ## How To Install
 
 ###Clone
+<br>
     ```bash
     clone https://github.com/chairilptmgahama/room_booking
     ```
@@ -22,7 +23,7 @@
 ###Run
     ```bash
     php artisan serv
-    ```bash
+    ``
     
 
 ###Login API
