@@ -1,37 +1,42 @@
 ## How To Install
 
-Clone
+###Clone
     ```bash
     clone https://github.com/chairilptmgahama/room_booking
     ```
 
-Install
+###Install
     ```bash
     php composer install
     ```
     - copy .env.example to .env
-    - change 
-        //DB_CONNECTION=mysql
-        //DB_HOST=127.0.0.1
-        //DB_PORT=3306
-        /DB_DATABASE=your_DB_Name
-        //DB_USERNAME=your_db_username
-        //DB_PASSWORD=your_DB_password
+    ```bash
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=your_DB_Name
+        DB_USERNAME=your_db_username
+        DB_PASSWORD=your_DB_password
+    ```
 
-Run
-    - php artisan serv
+###Run
+    ```bash
+    php artisan serv
+    ```bash
     
 
-Login API
+###Login API
+    ```bash
     curl --location --request POST 'http://localhost:3000/api/v1/data/login' --header 'accept: application/json' --header 'key: room_schedule' --header 'Content-Type: application/json' --data '{"username": "myuser", "password":"user_2024"}'
-    //    {
-    //        "status": 1,
-    //        "message": null,
-    //        "data": {
-    //            "object_id": "bzRWT28vZ3BUM0E9",
-    //            "username": "myuser"
-    //        }
-    //    }
+    ``
+        {
+            "status": 1,
+            "message": null,
+            "data": {
+                "object_id": "bzRWT28vZ3BUM0E9",
+                "username": "myuser"
+            }
+        }
 
 
 Booking Schedule
