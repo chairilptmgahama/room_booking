@@ -16,8 +16,10 @@ return new class extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->dateTime('date')->nullable();
-            $table->time('from')->nullable();
-            $table->time('to')->nullable();
+            $table->timestamp('from')->nullable();
+            $table->timestamp('to')->nullable();
+            $table->integer('entry')->nullable();
+            $table->string('file_link', 230)->nullable();
             $table->timestamp('created_at')->useCurrent();
             
             

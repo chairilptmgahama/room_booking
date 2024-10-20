@@ -7,6 +7,8 @@ use Validator;
 
 class Api extends Model {
     
+    private $maxParticipant = 25;
+    
     public function getInsertTable($table, $data){
         try {
             $lastInsertedID = DB::table($table)->insertGetId($data);
@@ -63,14 +65,31 @@ class Api extends Model {
         $ciphering = $getData['chipher'];
         $max_random = $getData['max_random'];
         $charsetnumber = $getData['alphanum'];
-        $key_number = '';
-        for ($i = 0; $i < $max_random; $i++) {
-            $key_number .= $charsetnumber[(mt_rand(0, strlen($charsetnumber) - 1))];
-        }
+        $this->randString($max_random);
         $string = $value.$key_number;
         $result = base64_encode(openssl_encrypt($string, $ciphering, $salt, 0, $iv));
         return $result;
     }
+    
+    public function randString($max_random){
+        $getData = $this->getEncryptData();
+        $charsetnumber = $getData['alphanum'];
+        $key_number = '';
+        for ($i = 0; $i < $max_random; $i++) {
+            $key_number .= $charsetnumber[(mt_rand(0, strlen($charsetnumber) - 1))];
+        }
+        return $key_number;
+    }
+    
+    public function getSubstrString($data){
+        return substr(substr($data, 0, -8), 5);
+    }
+    
+    public function getMaxParticipant(){
+        return $this->maxParticipant;
+    }
+    
+    
     
     
     
