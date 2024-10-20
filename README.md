@@ -1,21 +1,26 @@
 ## How To Install
 
-###Clone
+Clone
 <br>
     ```
     clone https:github.com/chairilptmgahama/room_booking
     ```
+<br>
+<br>
 
-###Install
+Install
 <br>
     ```
     php composer install
     ```
-###Copy
+<br>
+<br>
+
+Copy
 <br>
     copy .env.example to .env
-
 <br>
+
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -30,7 +35,8 @@ DB_PASSWORD=your_DB_password
 ```
 php artisan serv
 ```
-    
+<br>    
+<br>
 
 ###Login API
 <br>
